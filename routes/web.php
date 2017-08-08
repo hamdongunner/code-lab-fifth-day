@@ -11,7 +11,7 @@ Route::get('/', 'PageController@getHome');
 
 Route::get('/signup', 'PageController@getSignup');
 
-Route::get('/signup/request', 'PageController@requestSignup')->name('signup');
+Route::post('/signup/request', 'PageController@requestSignup');
 
 Route::get('/videos/{id?}/{number?}', 'PageController@requestSignup');
 

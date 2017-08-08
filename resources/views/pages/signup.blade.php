@@ -13,7 +13,8 @@
 
 <div style="padding-top: 30px;" class="container">
     <div class="row">
-    <form class="panel panel-warning" method="get" action="{{ route('signup') }}">
+    <form class="panel panel-warning" method="post" action="/signup/request">
+        <input type="hidden" value="{{csrf_token()}}" name="_token">
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control"  name="email" id="exampleInputEmail1" placeholder="Email">
