@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator;
+use Illuminate\Support\Facades\Log;
 class PageController extends Controller
 {
     //
@@ -30,7 +31,7 @@ class PageController extends Controller
 
     public function requestSignup(Request $request)
     {
-
+        Log::info('require: '.$request);
         $validator = Validator::make($request->all(),[
             'email'=>'required | email',
             'password'=>'required | min:6| max:10',
