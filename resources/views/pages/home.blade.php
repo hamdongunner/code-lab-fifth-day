@@ -19,7 +19,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-2 col-lg-offset-3">
-            <h1>hello hamdon crown of my head</h1>
+            <h1>hello  crown of my head</h1>
         </div>
     </div>
 </div>

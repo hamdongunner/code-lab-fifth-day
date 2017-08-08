@@ -11,8 +11,9 @@ class PageController extends Controller
 
     public function getHome(Request $request)
     {
-        if (Session::has('email'))
-            return view('pages.home');
+        if (Session::has('email')){
+            $em = $request->session()->get('email');
+            return view('pages.home',compact('em'));}
 
         return view('pages.signup');
 
