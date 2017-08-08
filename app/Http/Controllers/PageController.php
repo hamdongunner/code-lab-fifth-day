@@ -51,10 +51,22 @@ class PageController extends Controller
         }
 
 
-//        $request->session()->put('email',$request->email);
+
+        $request->session()->put('email',$request->email);
+
+        if ($request->session()->has('email')) {
+            return $request->session()->get('email');
+        }
+
+
+
+
+
+
+
 
 //        return $request->session()->get('email');
-        return $request->session()->all();
+//        return $request->session()->all();
 
 
 //        $email = $request->email;
