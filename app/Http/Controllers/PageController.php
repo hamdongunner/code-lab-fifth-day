@@ -20,4 +20,18 @@ class PageController extends Controller
         return view('pages.videos',compact('id','number'));
 
     }
+
+
+    public function getSignup()
+    {
+        return view('pages.signup');
+    }
+
+
+    public function requestSignup(Request $request)
+    {
+        $email = $request->email;
+        $password = $request->password;
+        return $request->all();
+    }
 }

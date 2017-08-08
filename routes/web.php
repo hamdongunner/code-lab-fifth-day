@@ -9,7 +9,11 @@
 
 Route::get('/', 'PageController@getHome');
 
-Route::get('/videos/{id?}/{number?}', 'PageController@getvideos');
+Route::get('/signup', 'PageController@getSignup');
+
+Route::get('/signup/request', 'PageController@requestSignup')->name('signup');
+
+Route::get('/videos/{id?}/{number?}', 'PageController@requestSignup');
 
 
 
