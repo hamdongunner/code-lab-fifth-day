@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Validator;
 class PageController extends Controller
 {
     //
@@ -30,8 +30,21 @@ class PageController extends Controller
 
     public function requestSignup(Request $request)
     {
-        $email = $request->email;
-        $password = $request->password;
-        return $request->all();
+
+        $validator = Validator::make($request->all(),[
+            'email'=>'required',
+            'password'=>'required'
+    ]);
+        
+        if($validator->fails()){
+            return "not Ok";
+
+        }
+
+        return "ok";
+
+//        $email = $request->email;
+//        $password = $request->password;
+//        return $request->all();
     }
 }
