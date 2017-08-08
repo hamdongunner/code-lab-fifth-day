@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Validator;
 use Illuminate\Support\Facades\Log;
+use Validator;
 class PageController extends Controller
 {
     //
@@ -31,13 +31,14 @@ class PageController extends Controller
 
     public function requestSignup(Request $request)
     {
-        Log::info('require: '.$request);
+//        Log::info('require: '.$request);
+
         $validator = Validator::make($request->all(),[
             'email'=>'required | email',
-            'password'=>'required | min:6| max:10',
+            'password'=>'required ',
             'repassword'=>'required | same:password',
 //            'image'=>'required | image',
-            'image'=>'required | mimes:png,jpg,gif | max:50000'
+            'image'=>''
     ]);
         if($validator->fails()){
 //            return redirect('../');
@@ -49,7 +50,12 @@ class PageController extends Controller
 
         }
 
-        return "ok";
+
+//        $request->session()->put('email',$request->email);
+
+//        return $request->session()->get('email');
+        return $request->session()->all();
+
 
 //        $email = $request->email;
 //        $password = $request->password;
