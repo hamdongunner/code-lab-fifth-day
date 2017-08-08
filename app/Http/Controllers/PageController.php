@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 use Validator;
 class PageController extends Controller
 {
@@ -54,7 +55,7 @@ class PageController extends Controller
 
         $request->session()->put('email',$request->email);
 
-        if ($request->session()->has('email')) {
+        if (Session::has('email')) {
             return $request->session()->get('email');
         }
 
