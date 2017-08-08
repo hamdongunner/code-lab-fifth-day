@@ -31,7 +31,7 @@
         {{--<input type="hidden" value="{{csrf_token()}}" name="_token">--}}
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control"  name="email" id="exampleInputEmail1" placeholder="Email">
+            <input type="email" value="{{old('email')}}" class="form-control"  name="email" id="exampleInputEmail1" placeholder="Email">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
