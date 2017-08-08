@@ -1,34 +1,32 @@
+
 @extends('layout.master')
 
 
-@section('videos')
-    active
+@section('navColor')
+    navbar-default
 @endsection
-
 
 @section('title')
-    Videos
+    bey
 @endsection
 
-@section('navColor')
-    navbar-inverse
+@section('signout')
+    active
 @endsection
 
 
 @section('js')
     <script>
-        alert('hello');
+        alert('you are gona signout the web');
     </script>
 @endsection
-
 
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-lg-2 col-lg-offset-3">
-                <h1>Videos id is</h1>
-                <h1>Videos number is </h1>
+                <h1>good bey my friend</h1>
             </div>
         </div>
     </div>

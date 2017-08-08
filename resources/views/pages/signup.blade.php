@@ -26,7 +26,7 @@
 
             </div>
         @endif
-    <form enctype="multipart/form-data" class="panel panel-warning" method="post" action="/signup/request">
+    <form class="panel panel-warning" method="post" action="/signup/request">
         {{csrf_field()}}
         {{--<input type="hidden" value="{{csrf_token()}}" name="_token">--}}
         <div class="form-group">
@@ -40,8 +40,6 @@
         <div class="form-group">
             <label for="exampleInputPassword1">Re password</label>
             <input type="password" class="form-control" name="repassword" id="exampleInputPassword1" placeholder="Password">
-            <br >
-            <input type="file" class="form-control" name="image" >
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>

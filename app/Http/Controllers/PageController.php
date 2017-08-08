@@ -8,25 +8,48 @@ use Illuminate\Support\Facades\Session;
 use Validator;
 class PageController extends Controller
 {
-    //
 
-    public function getHome()
+    public function getHome(Request $request)
     {
-        return view('pages.home');
+        if (Session::has('email'))
+            return view('pages.home');
+
+        return view('pages.signup');
+
     }
 
-    public function getvideos($id = null, $number = null)
+    public function getAbout(Request $request)
     {
+        if (Session::has('email'))
+            return view('pages.about');
 
-
-        return view('pages.videos',compact('id','number'));
+        return view('pages.signup');
 
     }
+
+
+
+    public function requestSignout(Request $request)
+    {
+
+        if (Session::has('email')){
+            $request->session()->flush();
+
+            return view('pages.signout');
+        }else{
+
+        }
+
+        return view('pages.signup');
+
+
+    }
+
 
 
     public function getSignup()
     {
-        return view('pages.signup');
+        return view('pages.home');
     }
 
 
@@ -36,18 +59,17 @@ class PageController extends Controller
 
         $validator = Validator::make($request->all(),[
             'email'=>'required | email',
-            'password'=>'required ',
+            'password'=>'required | min:6',
             'repassword'=>'required | same:password',
-//            'image'=>'required | image',
-            'image'=>''
+//            'image'=>'required | image'
     ]);
         if($validator->fails()){
 //            return redirect('../');
 //            return redirect('/signup');
 //            return redirect();
-//            return back()->withErrors($validator->errors()->all())->withInput();
+            return back()->withErrors($validator->errors()->all())->withInput();
 //            return view('errors.422');
-            return abort('404');
+//            return abort('404');
 
         }
 
@@ -56,7 +78,7 @@ class PageController extends Controller
         $request->session()->put('email',$request->email);
 
         if (Session::has('email')) {
-            return $request->session()->get('email');
+            return view('pages.home');
         }
 
 
