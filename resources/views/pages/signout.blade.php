@@ -26,7 +26,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-2 col-lg-offset-3">
-                <h1>good bey my friend</h1>
+                <h1>good bye my friend</h1>
             </div>
         </div>
     </div>
