@@ -32,8 +32,9 @@ class PageController extends Controller
     {
 
         $validator = Validator::make($request->all(),[
-            'email'=>'required',
-            'password'=>'required'
+            'email'=>'required | email',
+            'password'=>'required | min:6| max:10',
+            'repassword'=>'required | same:password'
     ]);
         if($validator->fails()){
 //            return redirect('../');
