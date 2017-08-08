@@ -36,12 +36,12 @@
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
-            <br >
-            <input type="file" class="form-control" name="image" >
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Re password</label>
             <input type="password" class="form-control" name="repassword" id="exampleInputPassword1" placeholder="Password">
+            <br >
+            <input type="file" class="form-control" name="image" >
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>

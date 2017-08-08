@@ -36,14 +36,15 @@ class PageController extends Controller
             'password'=>'required | min:6| max:10',
             'repassword'=>'required | same:password',
 //            'image'=>'required | image',
-            'image'=>'required | mimes:png,jpg,gif'
+            'image'=>'required | mimes:png,jpg,gif | max:50000'
     ]);
         if($validator->fails()){
 //            return redirect('../');
 //            return redirect('/signup');
 //            return redirect();
-            return back()->withErrors($validator->errors()->all())->withInput();
-
+//            return back()->withErrors($validator->errors()->all())->withInput();
+//            return view('errors.422');
+            return abort('404');
 
         }
 
