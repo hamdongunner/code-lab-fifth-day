@@ -15,7 +15,8 @@
 
 <div style="padding-top: 30px;" class="container">
     <div class="row">
-        @if($errors->any())
+        {{--@if($errors->any())--}}
+        @if($errors->count() > 0)
             <div class="alert alert-danger">
                 <ul>
                     @foreach($errors->all() as $error)
