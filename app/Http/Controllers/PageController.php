@@ -37,9 +37,9 @@ class PageController extends Controller
     ]);
         if($validator->fails()){
 //            return redirect('../');
-            return redirect('/signup');
+//            return redirect('/signup');
 //            return redirect();
-            return redirect()->back();
+            return redirect()->back()->withErrors($validator->errors()->all());
 
 
         }

@@ -11,8 +11,20 @@
 
 @section('content')
 
+
+
 <div style="padding-top: 30px;" class="container">
     <div class="row">
+        @if($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+
+            </div>
+        @endif
     <form class="panel panel-warning" method="post" action="/signup/request">
         {{csrf_field()}}
         {{--<input type="hidden" value="{{csrf_token()}}" name="_token">--}}
