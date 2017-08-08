@@ -35,7 +35,7 @@ class PageController extends Controller
             'email'=>'required',
             'password'=>'required'
     ]);
-        
+//        dd($validator->fails());
         if($validator->fails()){
             return "not Ok";
 
