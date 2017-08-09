@@ -28,6 +28,7 @@
             <ul class="nav navbar-nav">
                 <li class="@yield('home')"><a href="/">Home <span class="sr-only">(current)</span></a></li>
                 <li class="@yield('about')"><a href="/about">About</a></li>
+                <li class="@yield('about')"><a href="/get_blogs">get_blogs</a></li>
                 <li class="@yield('signout')"><a href="/out">Singout</a></li>
 
 
