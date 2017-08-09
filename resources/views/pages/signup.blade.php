@@ -16,10 +16,7 @@
 <div style="padding-top: 30px;" class="container">
     <br ><br >
 
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-2">
-            <a href="/login" style="background-color:  #E1696A;color: white;width: 80%;" class="btn btn-default">Login</a>
-        </div>
+
     </div>
     <div class="row">
         {{--@if($errors->any())--}}
