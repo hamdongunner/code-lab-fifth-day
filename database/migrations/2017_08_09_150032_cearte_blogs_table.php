@@ -15,7 +15,7 @@ class CearteBlogsTable extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->default(null); // راح يعتبرها ك سترنك
+            $table->string('title')->nullable()->default(null);// هيجي صحيح راح تصير نل
             $table->longText('content')->nullable();
             $table->integer('user_id')->unsigned()->nullable();
             $table->timestamps();
