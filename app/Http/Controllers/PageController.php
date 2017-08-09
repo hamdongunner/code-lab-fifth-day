@@ -55,7 +55,7 @@ class PageController extends Controller
 
     public function getBlogs()
     {
-        return DB::table('blogs')->get(['id','title']);
+        return DB::table('blogs')->where(['id'=>1])->get(['id','title']);
     }
 
     public function getSignup()
