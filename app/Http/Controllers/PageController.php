@@ -46,6 +46,24 @@ class PageController extends Controller
     }
 
 
+    public function getLogin()
+    {
+        if (Session::has('email'))
+            return view('pages.home');
+
+        return view('pages.login');
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getLoginrequist(Request $request)
+    {
+        return view('pages.login');
+        
+    }
+
 
     public function getSignup()
     {

@@ -14,6 +14,13 @@
 
 
 <div style="padding-top: 30px;" class="container">
+    <br ><br >
+
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-2">
+            <a href="/login" style="background-color:  #E1696A;color: white;width: 80%;" class="btn btn-default">Login</a>
+        </div>
+    </div>
     <div class="row">
         {{--@if($errors->any())--}}
         @if($errors->count() > 0)
@@ -26,7 +33,8 @@
 
             </div>
         @endif
-    <form class="panel panel-warning" method="post" action="/signup/request">
+        <br >
+        <form class="panel panel-warning" method="post" action="/signup/request">
         {{csrf_field()}}
         {{--<input type="hidden" value="{{csrf_token()}}" name="_token">--}}
         <div class="form-group">

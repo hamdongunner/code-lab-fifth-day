@@ -10,6 +10,7 @@
 Route::get('/', 'PageController@getHome');
 
 Route::get('/signup', 'PageController@getSignup');
+Route::get('/login', 'PageController@getLogin');
 
 Route::post('/signup/request', 'PageController@requestSignup');
 
