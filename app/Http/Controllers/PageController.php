@@ -57,7 +57,7 @@ class PageController extends Controller
     {
 //        return DB::table('blogs')->select('id')->get(); // there is as that change the name just in the local host not ion the DB
 //        return DB::table('blogs')->select(DB::raw('count(*) as t_count'))->get();
-       $db = DB::table('blogs')->where('id','=',1)
+       $db = DB::table('blogs')->whereIn('id',[1,2])
            ->update(['title'=>"hello",'content'=>'faw','user_id'=>1]
         );
         if($db)
