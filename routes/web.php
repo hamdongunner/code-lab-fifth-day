@@ -12,6 +12,7 @@ Route::get('/', 'PageController@getHome');
 Route::get('/signup', 'PageController@getSignup');
 
 Route::post('/signup/request', 'PageController@requestSignup');
+Route::get('/get_blogs', 'PageController@getBlogs');
 
 
 

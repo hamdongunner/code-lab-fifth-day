@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 use Validator;
+
 class PageController extends Controller
 {
 
@@ -51,6 +53,11 @@ class PageController extends Controller
     }
 
 
+    public function getBlogs()
+    {
+        return DB::table('blogs')->get();
+    }
+
     public function getSignup()
     {
         return view('pages.home');
@@ -84,7 +91,6 @@ class PageController extends Controller
         if (Session::has('email')) {
             return view('pages.home');
         }
-
 
 
 
