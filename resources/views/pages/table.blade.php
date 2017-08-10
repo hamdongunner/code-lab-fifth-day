@@ -23,10 +23,10 @@
                 {{csrf_field()}}
             <select class="form-control" name="id">
                 @foreach($users as $user)
-                <option>{{$user->id}}</option>{{$user->name}}
+                <option>{{$user->id}}</option>
                 @endforeach
             </select>
-                <input type="text" class="form-control" name="add" id="exampleInputPassword1">
+                <input type="text" class="form-control" name="add" id="exampleInputPassword1" placeholder="enter the title ">
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <br >
