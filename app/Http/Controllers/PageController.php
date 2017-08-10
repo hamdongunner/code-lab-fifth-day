@@ -53,6 +53,15 @@ class PageController extends Controller
     }
 
 
+    public function searchBlog(Request $request)
+    {
+        $request->session()->put('search', $request->search);
+
+        $search = $request->session()->get('search');
+
+        return DB::table('blogs')->where('title','like',$search)->get();
+    }
+
 
     public function deleteBlogs($id = null)
     {

@@ -16,7 +16,11 @@
 @section('content')
     <div class="container">
         <div class="row">
-
+            <form class="panel panel-warning" method="post" action="/blogs/search/request">
+                {{csrf_field()}}
+                <input type="text" class="form-control" name="search" id="exampleInputPassword1" placeholder="enter the title ">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
             <br >
             <br >
             <form class="panel panel-warning" method="post" action="/blogs/add/request">

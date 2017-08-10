@@ -14,6 +14,8 @@ Route::post('/signup/request', 'PageController@requestSignup');
 
 Route::post('/blogs/add/request', 'PageController@addBlog');
 
+Route::post('/blogs/search/request', 'PageController@searchBlog');
+
 Route::get('/get_blogs', 'PageController@getBlogs');
 
 Route::get('/blogs/edit/{id?}', 'PageController@editBlogsform');
