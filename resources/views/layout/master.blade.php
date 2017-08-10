@@ -67,15 +67,15 @@
 
 
 
-<div class="row" style="position: fixed; bottom:0;background-color: #E1696A;background-image: url(http://codelab.camp/ninja.png);background-repeat: no-repeat;background-position: 95% 0%;background-size: contain;color: #fff;">
-    <div class="col-lg-8 col-md-8 col-sm-8  col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" >
-        <h1>Contact Us</h1>
-        {{date("Y/m/d")}}
-        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur eaque enim eveniet harum id ipsum, minus, necessitatibus non, nostrum obcaecati officia porro reiciendis reprehenderit similique temporibus velit veniam voluptate!</h4>
-        <a type="button" href="https://www.facebook.com/CodeLabBootcamp/" class="tramspamint" style="color: #ffffff ;"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
-        <br><br>
-    </div>
-</div>
+{{--<div class="row" style="position: fixed; bottom:0;background-color: #E1696A;background-image: url(http://codelab.camp/ninja.png);background-repeat: no-repeat;background-position: 95% 0%;background-size: contain;color: #fff;">--}}
+    {{--<div class="col-lg-8 col-md-8 col-sm-8  col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" >--}}
+        {{--<h1>Contact Us</h1>--}}
+        {{--{{date("Y/m/d")}}--}}
+        {{--<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur eaque enim eveniet harum id ipsum, minus, voluptate!</h4>--}}
+        {{--<a type="button" href="https://www.facebook.com/CodeLabBootcamp/" class="tramspamint" style="color: #ffffff ;"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>--}}
+        {{--<br><br>--}}
+    {{--</div>--}}
+{{--</div>--}}
 
 
 

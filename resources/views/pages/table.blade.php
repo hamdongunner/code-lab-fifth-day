@@ -16,6 +16,22 @@
 @section('content')
     <div class="container">
         <div class="row">
+
+            <br >
+            <br >
+            <form class="panel panel-warning" method="post" action="/blogs/add/request">
+                {{csrf_field()}}
+            <select class="form-control" name="id">
+                @foreach($users as $user)
+                <option>{{$user->id}}</option>{{$user->name}}
+                @endforeach
+            </select>
+                <input type="text" class="form-control" name="add" id="exampleInputPassword1">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <br >
+            <br >
+            <br >
             <div class="col-md-8 col-md-offset-2">
                 <table class="text-center table table-responsive table-bordered">
                     <tr>

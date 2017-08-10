@@ -34,8 +34,24 @@ class PageController extends Controller
             ->where('id', $id)
             ->update(['title' => $title2]);
 
-        return redirect('/get_blogs');;
+        return redirect('/get_blogs');
     }
+
+
+
+    public function addBlog(Request $request)
+    {
+        $request->session()->put('add', $request->add);
+        $request->session()->put('id', $request->id);
+        $name = $request->session()->get('add');
+        $id = $request->session()->get('id');
+
+        DB::table('blogs')->insert([
+            ['title' => $name , 'user_id' => $id]
+        ]);
+        return redirect('/get_blogs');
+    }
+
 
 
     public function deleteBlogs($id = null)
@@ -46,6 +62,10 @@ class PageController extends Controller
 
         return back();
     }
+
+
+
+
 
 
     public function editBlogsform($id = null)
@@ -97,21 +117,15 @@ class PageController extends Controller
 
     public function getBlogs()
     {
-//       $db = DB::table('blogs')->whereIn('id',[1,2])
-//           ->update(['title'=>"hello",'content'=>'faw','user_id'=>1]
-//        );
-//        if($db)
-//            return "updated";
 
-
-
+        $users = DB::table('users')->get();
         $blogs = DB::table('blogs')
             ->join('users','blogs.user_id','=','users.id')
             ->select('blogs.*','users.name as username')
             ->paginate(10);
 
 //        return $blogs;
-        return view('pages.table',compact('blogs'));
+        return view('pages.table',compact('blogs','users'));
     }
 
 
@@ -122,7 +136,6 @@ class PageController extends Controller
     {
         return view('pages.home');
     }
-
 
 
 
