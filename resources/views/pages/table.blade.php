@@ -18,10 +18,11 @@
         <div class="row">
             <form class="panel panel-warning" method="post" action="/blogs/search/request">
                 {{csrf_field()}}
-                <input type="text" class="form-control" name="search" id="exampleInputPassword1" placeholder="enter the title ">
+                <br >
+
+                <input type="text" class="form-control" name="search" id="exampleInputPassword1" placeholder=" search the title ">
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
-            <br >
             <br >
             <form class="panel panel-warning" method="post" action="/blogs/add/request">
                 {{csrf_field()}}
@@ -33,8 +34,6 @@
                 <input type="text" class="form-control" name="add" id="exampleInputPassword1" placeholder="enter the title ">
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
-            <br >
-            <br >
             <br >
             <div class="col-md-8 col-md-offset-2">
                 <table class="text-center table table-responsive table-bordered">
